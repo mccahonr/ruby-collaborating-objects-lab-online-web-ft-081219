@@ -3,21 +3,21 @@ class Artist
   @@all = []
 
   def initialize(name)
-    @name = name 
+    @name = name
     @@all << self
-  end 
+  end
 
   def add_song(song)
     song.artist = self
   end
 
-  def self.find_or_create_by_name(artist_name) 
+  def self.find_or_create_by_name(artist_name)
     #  if self.find(artist_name)
     #   self.find(artist_name)
     #  else
-    #   self.create(artist_name) 
+    #   self.create(artist_name)
     #  end
-     self.find(artist_name)|| self.create(artist_name) 
+     self.find(artist_name)|| self.create(artist_name)
   end
 
   def self.find(artist_name)
